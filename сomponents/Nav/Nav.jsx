@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div>
       <div className={classes.navbar}>
-        <div className="container">
+        <div>
           <div className={classes.info}>
             <h1>Movies Info</h1>
           </div>
