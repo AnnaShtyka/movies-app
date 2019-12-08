@@ -9,22 +9,24 @@ import FilmDescription from "../Description/FilmDescription";
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Search />
-            <Films />
-          </Route>
-          <Route
-            exact
-            path="/FilmDescription/"
-            component={FilmDescription}
-          ></Route>
-        </Switch>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path="/">
+              <Search />
+              <Films />
+            </Route>
+            <Route
+              exact
+              path="/FilmDescription/"
+              component={FilmDescription}
+            ></Route>
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
   );
 };
 
