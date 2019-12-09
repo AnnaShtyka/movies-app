@@ -3,9 +3,9 @@ const initialState = {
     completed: false
   };
   
-  const fetchMovieDescription = (state = initialState, action) => {
+  const saveMovieDescription = (state = initialState, action) => {
     switch (action.type) {
-      case "FETCH_MOVIE_DESCRIPTION":
+      case "SAVE_MOVIE_DESCRIPTION":
         return {
           ...state,
           movie: action.payload, 
@@ -16,4 +16,4 @@ const initialState = {
     }
   };
 
-  export default fetchMovieDescription;
+  export default saveMovieDescription;
