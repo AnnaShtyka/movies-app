@@ -3,9 +3,9 @@ const initialState = {
   completed: false
 };
 
-const fetchMovies = (state = initialState, action) => {
+const saveMovies = (state = initialState, action) => {
   switch (action.type) {
-    case "FETCH_MOVIES":
+    case "SAVE_MOVIES":
       return {
         ...state,
         movies: action.payload,
@@ -16,4 +16,4 @@ const fetchMovies = (state = initialState, action) => {
   }
 };
 
-export default fetchMovies;
+export default saveMovies;
