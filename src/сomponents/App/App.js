@@ -9,7 +9,7 @@ import Search from "../Search/Search";
 import FilmDescription from "../Description/FilmDescription";
 import FavoriteMovies from "../FavoriteMovies/FavoriteMovies";
 
-import configureStore from "../../configureStore";
+import store from "../../store";
 
 const App = () => {
   return (
