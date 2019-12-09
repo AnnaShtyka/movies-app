@@ -1,6 +1,6 @@
 export const saveMovieDescription = () => {
   return {
-    type: "FETCH_MOVIE_DESCRIPTION",
+    type: "SAVE_MOVIE_DESCRIPTION",
     payload: movie
   };
 };
