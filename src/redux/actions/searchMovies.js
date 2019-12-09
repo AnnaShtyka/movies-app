@@ -1,6 +1,6 @@
 export const searchMovies = () => {
-    dispatch({
+    return{
       type: 'SEARCH_MOVIES',
       payload: text
-    });
+    };
   };
