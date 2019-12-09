@@ -1,11 +1,11 @@
 import {combineReducers}  from "redux";
 
-import fetchMovies from "./fetchMovies";
+import saveMovies from "./saveMovies";
 import searchMovies from "./searchMovies";
-import fetchMovieDescription from "./fetchMovieDescription";
+import saveMovieDescription from "./saveMovieDescription";
 
 export default combineReducers({
-  fetchMovies,
+  saveMovies,
   searchMovies,
-  fetchMovieDescription
+  saveMovieDescription
 });
