@@ -3,7 +3,7 @@ const initialState = {
   completed: false
 };
 
- const searchReducer = (state = initialState, action) => {
+ const searchMovies = (state = initialState, action) => {
   switch (action.type) {
     case "SEARCH_MOVIES":
       return {
@@ -16,4 +16,4 @@ const initialState = {
   }
 };
 
-export default searchReducer;
+export default searchMovies;
