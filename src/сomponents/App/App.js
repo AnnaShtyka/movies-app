@@ -1,45 +1,40 @@
-import React, { Component } from "react";
-import classes from "./Search.module.css";
+import React from "react";
 
-import { connect } from "react-redux";
+import "./App.css";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import { searchMovies } from "../../redux/actions/searchMovies";
-import { saveMovies } from "../../redux/actions/saveMovies";
+import Nav from "../Nav/Nav";
 
-class Search extends Component {
-  onChange = e => {
-    this.props.searchMovies(e.target.value);
-  };
+import FilmDescription from "../Description/FilmDescription";
+import FavoriteMovies from "../FavoriteMovies/FavoriteMovies";
+import MoviesContainer from "../MoviesContainer/MoviesContainer";
+import Search from "../Search/Search";
 
-  onSubmit = e => {
-    e.preventDefault();
-    this.props.saveMovies(this.props.text);
-  };
-  render() {
-    return (
-      <div className={classes.search}>
-        <div className={classes.search_container}>
-          <h1>
-            <i className="fa fa-search" /> Search for a movie ..
-          </h1>
-          <form className={classes.searchForm} onSubmit={this.onSubmit}>
-            <input
-              type="text"
-              name="searchText"
-              placeholder="Search Movies ..."
-              onChange={this.onChange}
-            />
-            <button type="submit">Search</button>
-          </form>
-        </div>
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Search />
+        <Switch>
+          <Route exact path="/" component={MoviesContainer} >
+           </Route>
+          <Route
+            exact
+            path="/FilmDescription/"
+            component={FilmDescription}
+          ></Route>
+          <Route
+            exact
+            path="/FavoriteMovies/"
+            component={FavoriteMovies}
+          ></Route>
+        </Switch>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
-const mapStateToProps = state => ({
-  text: state.movies.text
-});
+export default App;
 
-export default connect(mapStateToProps, { searchMovies, saveMovies })(Search);
 
