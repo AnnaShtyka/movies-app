@@ -4,7 +4,6 @@ import "./App.css";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import Nav from "../Nav/Nav";
-
 import FilmDescription from "../Description/FilmDescription";
 import FavoriteMovies from "../FavoriteMovies/FavoriteMovies";
 import MoviesContainer from "../MoviesContainer/MoviesContainer";
