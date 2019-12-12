@@ -16,18 +16,9 @@ const App = () => {
         <Nav />
         <Search />
         <Switch>
-          <Route exact path="/" component={MoviesContainer} >
-           </Route>
-          <Route
-            exact
-            path="/FilmDescription/"
-            component={FilmDescription}
-          ></Route>
-          <Route
-            exact
-            path="/FavoriteMovies/"
-            component={FavoriteMovies}
-          ></Route>
+          <Route exact path="/" component={MoviesContainer} />
+          <Route exact path="/MovieDescription/" component={MovieDescription} />
+          <Route exact path="/FavoriteMovies/" component={FavoriteMovies} />
         </Switch>
       </div>
     </Router>
