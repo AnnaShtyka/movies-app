@@ -14,10 +14,16 @@ const App = () => {
     <Router>
       <div>
         <Nav />
-        <Search />
         <Switch>
-          <Route exact path="/" component={MoviesContainer} />
-          <Route exact path="/MovieDescription/" component={MovieDescription} />
+          <Route exact path="/" >
+            <Search />
+            <MoviesContainer />
+          </Route>
+          <Route
+            exact
+            path="/MovieDescription/:id"
+            component={MovieDescription}
+          />
           <Route exact path="/FavoriteMovies/" component={FavoriteMovies} />
         </Switch>
       </div>
