@@ -6,7 +6,7 @@ export const saveMovieDescription = data => ({
 });
 export const fetchMovieDescription = id => dispatch => {
   axios
-    .get(`https://www.omdbapi.com/?apikey=5cb241a4&s=${id}`)
+    .get(`https://www.omdbapi.com/?apikey=5cb241a4&i=${id}`)
     .then(response => dispatch(saveMovieDescription(response.data)))
     .catch(err => console.log(err));
 };
