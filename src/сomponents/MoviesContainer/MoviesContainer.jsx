@@ -11,7 +11,7 @@ export const MoviesContainer = props => {
     <div className={classes.container}>
       {!movies || !movies.Search
         ? null
-        : movies.Search.map((movie, i) => <MovieCard key={i} {...movie} />)}
+        : movies.Search.map((movie, i) => <MovieCard key={i} movie={movie} />)}
     </div>
   );
 };
