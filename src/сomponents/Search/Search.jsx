@@ -3,8 +3,8 @@ import classes from "./Search.module.css";
 
 import { connect } from "react-redux";
 
-import { searchMovies } from "../../redux/actions/searchMovies";
-import { fetchMovies } from "../../redux/actions/saveMovies";
+import { searchMovies } from "../../redux/actions/moviesActions";
+import { getMovies } from "../../redux/actions/moviesActions";
 
 class Search extends Component {
   onChange = e => {
@@ -13,7 +13,7 @@ class Search extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    this.props.fetchMovies(this.props.text);
+    this.props.getMovies(this.props.text);
   };
   render() {
     return (
@@ -38,7 +38,8 @@ class Search extends Component {
 }
 
 const mapStateToProps = state => ({
-  text: state.searchMovies.text
+  text: state.searchText.text
 });
 
-export default connect(mapStateToProps, { searchMovies, fetchMovies })(Search);
+export default connect(mapStateToProps, { searchMovies, getMovies })(Search);
+
