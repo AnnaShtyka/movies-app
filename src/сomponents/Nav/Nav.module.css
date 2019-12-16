@@ -6,12 +6,11 @@
     color: white;
 }
 
-
 .info {
     padding: 20px;
 }
 
-.home {
+.navigation {
     padding: 20px;
     color: white;
 }
@@ -28,3 +27,4 @@ ul li {
 li i {
     color: rgba(255, 255, 0, 0.753);
 }
+
