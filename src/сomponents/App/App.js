@@ -15,16 +15,12 @@ const App = () => {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" >
+          <Route exact path="/">
             <Search />
             <MoviesContainer />
           </Route>
-          <Route
-            exact
-            path="/MovieDescription/:id"
-            component={MovieDescription}
-          />
-          <Route exact path="/FavoriteMovies/" component={FavoriteMovies} />
+          <Route path="/MovieDescription/:id" component={MovieDescription} />
+          <Route path="/FavoriteMovies/:id" component={FavoriteMovies} />
         </Switch>
       </div>
     </Router>
@@ -32,5 +28,6 @@ const App = () => {
 };
 
 export default App;
+
 
 
