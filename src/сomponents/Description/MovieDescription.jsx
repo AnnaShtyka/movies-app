@@ -3,22 +3,20 @@ import classes from "./MovieDescription.module.css";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchMovieDescription } from "../../redux/actions/saveMovieDescription";
+import { getMovieDescription } from "../../redux/actions/moviesActions";
 
 export class MovieDescription extends Component {
   componentDidMount() {
-    this.props.fetchMovieDescription(this.props.match.params.id);
+    this.props.getMovieDescription(this.props.match.params.id);
   }
-
   render() {
     const { movie } = this.props;
-
     return (
       <div className={classes.description_container}>
         <div className={classes.image_container}>
           <img src={movie.Poster} alt="Poster" />
           <button className={classes.favorite}>
-            <Link to={"/FavoriteMovies/"}>Add to favorites</Link>
+            <Link to={"/FavoriteMovies/" + movie.imdbID}>Add to favorites</Link>
           </button>
         </div>
         <div className={classes.details}>
@@ -64,10 +62,10 @@ export class MovieDescription extends Component {
 }
 
 const mapStateToProps = state => ({
-  movie: state.saveMovieDescription.movie
+  movie: state.movie.movie
 });
 
-export default connect(mapStateToProps, { fetchMovieDescription })(
+export default connect(mapStateToProps, { getMovieDescription })(
   MovieDescription
 );
 
