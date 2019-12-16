@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export const saveMovieDescription = data => ({
-  type: "SAVE_MOVIE_DESCRIPTION",
+import { SAVE_MOVIE_DESCRIPTION } from "../actions/types";
+
+const saveMovieDescription = data => ({
+  type: SAVE_MOVIE_DESCRIPTION,
   payload: data
 });
 export const fetchMovieDescription = id => dispatch => {
@@ -10,3 +12,4 @@ export const fetchMovieDescription = id => dispatch => {
     .then(response => dispatch(saveMovieDescription(response.data)))
     .catch(err => console.log(err));
 };
+
