@@ -1,26 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import classes from "./FavoriteMovies.module.css";
 
-const FavoriteMovies = () => {
-  return (
-    <div>
-      <div className={classes.favorite_title}>
-        <h3>My Favorite</h3>
-      </div>
-      <div className={classes.container}>
-      <div className={classes.film_card}>
-        <img
-          className={classes.img}
-          src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
-          alt=""
-        />
-        
-        <div>card-title</div>
-        <div className={classes.rating}>5,5</div>
-      </div>
-    </div>
-    </div>
-  );
-};
+import { connect } from "react-redux";
+import { getFavoriteMovies } from "../../redux/actions/moviesActions";
 
-export default FavoriteMovies;
+class FavoriteMovies extends Component {
+  componentDidMount() {
+    this.props.getFavoriteMovies(this.props.match.params.id);
+  }
+  render() {
+    const { movies } = this.props;
+    return (
+      <div>
+        <div className={classes.favorite_title}>
+          <h2>My Favorite</h2>
+        </div>
+        <div className={classes.container}>
+          <div className={classes.film_card}>
+            <img className={classes.img} src={movies.Poster} alt="Poster" />
+            <div>{movies.Title}</div>
+            <div className={classes.rating}>{movies.imdbRating}</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  movies: state.favoriteMovies.movies
+});
+
+export default connect(mapStateToProps, { getFavoriteMovies })(FavoriteMovies);
+
