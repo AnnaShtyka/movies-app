@@ -1,11 +1,13 @@
 import {combineReducers}  from "redux";
 
-import saveMovies from "./saveMovies";
-import searchMovies from "./searchMovies";
-import saveMovieDescription from "./saveMovieDescription";
+import movies from "./movies";
+import searchText from "./searchText";
+import movie from "./movie";
+import favoriteMovies from "./favoriteMovies";
 
 export default combineReducers({
-  saveMovies,
-  searchMovies,
-  saveMovieDescription
+  searchText,
+  movies,
+  movie,
+  favoriteMovies
 });
