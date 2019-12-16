@@ -14,6 +14,11 @@
     text-align: center;
     color: whitesmoke;
 }
+.film_card p {
+    display: block;
+    height: 20px;
+    margin-bottom: 30px;
+}
 
 img {
     width: 100%;
