@@ -4,14 +4,14 @@ import classes from "./Movie.module.css";
 
 export class MovieCard extends Component {
   render() {
-    const { Title, Poster, imdbID } = this.props;
+    const { movie } = this.props;
     return (
       <div className={classes.film_container}>
         <div className={classes.film_card}>
-          <img className={classes.img} src={Poster} alt="Poster" />
-          <p>{Title}</p>
+          <img className={classes.img} src={movie.Poster} alt="Poster" />
+          <p>{movie.Title}, {movie.Year}</p>
           <button className={classes.button}>
-            <Link to={"/MovieDescription/" + imdbID}>Details</Link>
+            <Link to={"/MovieDescription/" + movie.imdbID}>Details</Link>
           </button>
         </div>
       </div>
