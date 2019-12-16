@@ -8,12 +8,11 @@ const Nav = () => {
         <div className={classes.info}>
           <h1>Movies Info</h1>
         </div>
-        <div className={classes.home}>
+        <div className={classes.navigation}>
           <a href="/">
-            <h2>Home</h2>
+            <h2>Search</h2>
           </a>
         </div>
-
         <ul>
           <li>
             <i className="fab fa-imdb fa-5x" />
