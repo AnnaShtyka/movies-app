@@ -33,7 +33,7 @@ export const getMovieDescription = id => dispatch => {
 
 export const getFavoriteMovies = id => dispatch => {
   axios
-    .get(`https://www.omdbapi.com/?apikey=5cb241a4&i=${id}&plot=full`)
+    .get(`https://www.omdbapi.com/?apikey=5cb241a4&i=${id}`)
     .then(response =>
       dispatch({
         type: GET_FAVORITE_MOVIES,
