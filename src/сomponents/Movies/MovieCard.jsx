@@ -11,7 +11,7 @@ export class MovieCard extends Component {
           <img className={classes.img} src={movie.Poster} alt="Poster" />
           <p>{movie.Title}, {movie.Year}</p>
           <button className={classes.button}>
-            <Link to={"/MovieDescription/" + movie.imdbID}>Details</Link>
+            <Link to={`/description/ ${movie.imdbID}`}>Details</Link>
           </button>
         </div>
       </div>

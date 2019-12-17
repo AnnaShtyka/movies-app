@@ -9,7 +9,8 @@ const movie = (state = initialState, action) => {
     case GET_MOVIE_DESCRIPTION:
       return {
         ...state,
-        movie: action.payload
+        movie: action.payload,
+        loading: false
       };
     default:
       return state;

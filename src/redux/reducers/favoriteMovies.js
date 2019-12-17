@@ -9,7 +9,8 @@ const favoriteMovies = (state = initialState, action) => {
     case GET_FAVORITE_MOVIES:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        loading: false
       };
     default:
       return state;

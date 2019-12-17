@@ -9,7 +9,8 @@ const searchText = (state = initialState, action) => {
     case SEARCH_MOVIES:
       return {
         ...state,
-        text: action.payload
+        text: action.payload,
+        loading: false
       };
     default:
       return state;

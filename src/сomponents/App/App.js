@@ -6,8 +6,9 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import MovieDescription from "../Description/MovieDescription";
 import FavoriteMovies from "../FavoriteMovies/FavoriteMovies";
-import MoviesContainer from "../MoviesContainer/MoviesContainer";
 import Search from "../Search/Search";
+import Loading from "../Loading/Loading"
+
 
 const App = () => {
   return (
@@ -17,10 +18,10 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Search />
-            <MoviesContainer />
+            <Loading />
           </Route>
-          <Route path="/MovieDescription/:id" component={MovieDescription} />
-          <Route path="/FavoriteMovies/:id" component={FavoriteMovies} />
+          <Route path="/description/:id" component={MovieDescription} />
+          <Route path="/favorite/:id" component={FavoriteMovies} />
         </Switch>
       </div>
     </Router>

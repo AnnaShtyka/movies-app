@@ -23,7 +23,7 @@ export class MovieDescription extends Component {
        <div className={classes.image_container}>
           <img src={movie.Poster} alt="Poster" />
           <button className={classes.favorite}>
-            <Link to={"/FavoriteMovies/" + movie.imdbID}>Add to favorites</Link>
+            <Link to={`/favorite/ ${movie.imdbID}`}>Add to favorites</Link>
           </button>
         </div>
         <div className={classes.details}>

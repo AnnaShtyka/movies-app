@@ -16,7 +16,7 @@ class FavoriteMovies extends Component {
         <div className={classes.container}>
           <div className={classes.back}>
             <button>
-              <Link to={"/MovieDescription/" + movies.imdbID}>
+              <Link to={`/description/ ${movies.imdbID}`}>
                 Back to description
               </Link>
             </button>

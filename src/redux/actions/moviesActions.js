@@ -1,4 +1,4 @@
-import { SEARCH_MOVIES, GET_MOVIES, GET_MOVIE_DESCRIPTION, GET_FAVORITE_MOVIES } from "../actions/types";
+import { SEARCH_MOVIES, GET_MOVIES, GET_MOVIE_DESCRIPTION, GET_FAVORITE_MOVIES, LOADING } from "../actions/types";
 
 import axios from "axios";
 
@@ -33,7 +33,7 @@ export const getMovieDescription = id => dispatch => {
 
 export const getFavoriteMovies = id => dispatch => {
   axios
-    .get(`https://www.omdbapi.com/?apikey=5cb241a4&i=${id}`)
+    .get(`https://www.omdbapi.com/?apikey=5cb241a4&i=${id}&plot=full`)
     .then(response =>
       dispatch({
         type: GET_FAVORITE_MOVIES,
@@ -41,4 +41,10 @@ export const getFavoriteMovies = id => dispatch => {
       })
     )
     .catch(err => console.log(err));
-}
+};
+
+export const setLoading = () => {
+  return {
+    type: LOADING
+  };
+};
