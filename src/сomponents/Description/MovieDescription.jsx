@@ -9,11 +9,18 @@ export class MovieDescription extends Component {
   componentDidMount() {
     this.props.getMovieDescription(this.props.match.params.id);
   }
+
   render() {
     const { movie } = this.props;
+
     return (
       <div className={classes.description_container}>
-        <div className={classes.image_container}>
+        <div className={classes.back}>
+          <button>
+            <Link to={"/"}>Back to search results</Link>
+          </button>
+        </div>
+       <div className={classes.image_container}>
           <img src={movie.Poster} alt="Poster" />
           <button className={classes.favorite}>
             <Link to={"/FavoriteMovies/" + movie.imdbID}>Add to favorites</Link>
@@ -68,5 +75,3 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { getMovieDescription })(
   MovieDescription
 );
-
-

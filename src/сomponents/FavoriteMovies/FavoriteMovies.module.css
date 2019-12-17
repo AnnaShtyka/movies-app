@@ -5,11 +5,15 @@
     margin-top: 2rem;
 }
 
-.favorite_title {
-    margin-top: 20px;
-}
-.favorite_title h2 {
-    margin-top: 3rem;
+.back button {
+    margin-top: 0;
+    height: 30px;
+    position: absolute;
+    left: 3px;
+    background-color: rgba(20, 163, 68, 0.753);
+    border: 1px solid rgba(20, 163, 68, 0.753);
+    cursor: pointer;
+    color: white;
 }
 
 .film_card {

@@ -42,4 +42,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { searchMovies, getMovies })(Search);
-

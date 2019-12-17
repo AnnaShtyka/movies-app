@@ -3,7 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import MovieCard from "../Movies/MovieCard";
-import classes from "./MoviesContainer.module.css";
+import classes from './MoviesContainer.module.css';
 
 export const MoviesContainer = props => {
   const { movies } = props;

@@ -17,4 +17,3 @@ const searchText = (state = initialState, action) => {
 };
 
 export default searchText;
-

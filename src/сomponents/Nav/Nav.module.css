@@ -10,14 +10,8 @@
     padding: 20px;
 }
 
-.navigation {
-    padding: 20px;
-    color: white;
-}
-
 a {
     color: rgb(255, 255, 255) !important;
-    text-decoration: none;
 }
 
 ul li {
@@ -27,4 +21,3 @@ ul li {
 li i {
     color: rgba(255, 255, 0, 0.753);
 }
-

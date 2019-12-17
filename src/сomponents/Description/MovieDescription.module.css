@@ -3,9 +3,21 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 5rem;
-    padding: 3rem;
+    padding: 2rem;
     background-color: rgb(37, 36, 36);
     color: honeydew;
+    position: absolute;
+}
+
+.back button {
+    margin-top: 0;
+    height: 30px;
+    position: absolute;
+    left: 3px;
+    background-color: rgba(20, 163, 68, 0.753);
+    border: 1px solid rgba(20, 163, 68, 0.753);
+    cursor: pointer;
+    color: white;
 }
 
 .image_container {
@@ -37,7 +49,10 @@
 
 .description {
     margin-top: 20px;
-    width: 73%;
+    width: 72%;
     margin: 5px;
 }
 
+button a {
+    text-decoration: none;
+}
