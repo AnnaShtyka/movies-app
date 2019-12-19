@@ -3,7 +3,7 @@ import classes from "./MovieDescription.module.css";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getMovieDescription } from "../../redux/actions/moviesActions";
+import { getMovieDescription } from "../../actions/moviesActions";
 
 export class MovieDescription extends Component {
   componentDidMount() {
@@ -20,7 +20,7 @@ export class MovieDescription extends Component {
             <Link to={"/"}>Back to search results</Link>
           </button>
         </div>
-       <div className={classes.image_container}>
+        <div className={classes.image_container}>
           <img src={movie.Poster} alt="Poster" />
           <button className={classes.favorite}>
             <Link to={`/favorite/ ${movie.imdbID}`}>Add to favorites</Link>
@@ -34,28 +34,28 @@ export class MovieDescription extends Component {
             <strong>Year:</strong> {movie.Year}
           </div>
           <div>
-            <strong>Director:</strong> {movie.Director}
+            <strong>Director</strong> {movie.Director}
           </div>
           <div>
-            <strong>Writer:</strong> {movie.Writer}
+            <strong>Writer</strong> {movie.Writer}
           </div>
           <div>
-            <strong>Genre:</strong> {movie.Genre}
+            <strong>Genre</strong> {movie.Genre}
           </div>
           <div>
-            <strong>Actors:</strong> {movie.Actors}
+            <strong>Actors</strong> {movie.Actors}
           </div>
           <div>
-            <strong>Country:</strong> {movie.Country}
+            <strong>Country</strong> {movie.Country}
           </div>
           <div>
-            <strong>Language:</strong> {movie.Language}
+            <strong>Language</strong> {movie.Language}
           </div>
           <div>
-            <strong>imdb:</strong> {movie.imdbRating}
+            <strong>imdbRating</strong> {movie.imdbRating}
           </div>
           <div>
-            <strong>Released:</strong> {movie.Released}
+            <strong>Released</strong> {movie.Released}
           </div>
         </div>
 

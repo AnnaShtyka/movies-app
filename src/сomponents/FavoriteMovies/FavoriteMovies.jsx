@@ -3,7 +3,7 @@ import classes from "./FavoriteMovies.module.css";
 import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
-import { getFavoriteMovies } from "../../redux/actions/moviesActions";
+import { getFavoriteMovies } from "../../actions/moviesActions";
 
 class FavoriteMovies extends Component {
   componentDidMount() {
