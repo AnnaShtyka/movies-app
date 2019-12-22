@@ -9,7 +9,7 @@ const loading = (state = initialState, action) => {
     case LOADING:
       return {
         ...state,
-        loading: false
+        loading: true
       };
     default:
       return state;

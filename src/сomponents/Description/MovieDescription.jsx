@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getMovieDescription } from "../../actions/moviesActions";
 
-export class MovieDescription extends Component {
+class MovieDescription extends Component {
   componentDidMount() {
     this.props.getMovieDescription(this.props.match.params.id);
   }
